@@ -3,9 +3,8 @@
   <div class="row">
     <div class="col-md-6">
       <h1>Food</h1>
-      <div class="enter-info-link">        
-        <%= link_to "Enter Foods", new_user_food_path(current_user), id: "enter-food", remote: true %>
-      </div>
+
+        <%= link_to "Enter Foods", new_user_food_path(current_user), id: "enter-food-link", remote: true %>
       <% @foods.each do |food| %>
       <%= food.name %>
       <%= food.calories %>
@@ -13,7 +12,7 @@
     </div>
     <div class="col-md-6">
       <h1>Exercise</h1>
-      <%= link_to "Enter Exercises", new_user_food_path(current_user), id: "enter-exercise", remote: true %>
+      <%= link_to "Enter Exercises", new_user_exercise_path(current_user), id: "enter-exercise-link", remote: true %>
     </div>
   </div>
 </div>

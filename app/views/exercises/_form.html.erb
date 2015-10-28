@@ -1,5 +1,5 @@
-<div id="enter-food-form">
-  <%= form_for [@user, @food], remote: true do |f| %>
+<div id="enter-exercise-form">
+  <%= form_for [@user, @exercise], remote: true do |f| %>
     <div class="field">
       <%= f.label :name %>
       <%= f.text_field :name %>
@@ -9,4 +9,4 @@
   <% end %>
 </div>
 
-<button onclick='hideNewForm()' id="food-cancel-button">Cancel</button>
+<button onclick='hideNewForm2()' id="exercise-cancel-button">Cancel</button>

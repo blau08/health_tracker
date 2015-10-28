@@ -17,7 +17,12 @@
 //= require_tree .
 
 var hideNewForm = function () {
-  $("#enter-food").show();
-  $(".enter-info").remove();
-  $("#cancel-button").remove();
+  $("#enter-food-link").show();
+  $("#enter-food-form").remove();
+  $("#food-cancel-button").remove();
+}
+var hideNewForm2 = function () {
+  $("#enter-exercise-link").show();
+  $("#enter-exercise-form").remove();
+  $("#exercise-cancel-button").remove();
 }
