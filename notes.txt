@@ -1,0 +1,11 @@
+Models
+
+User
+- has many foods
+- has many exercises
+
+food
+- has calorie
+
+exercise
+- has calories
