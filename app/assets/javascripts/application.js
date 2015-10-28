@@ -15,3 +15,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var hideNewForm = function () {
+  $("#enter-food").show();
+  $(".enter-info").remove();
+  $("#cancel-button").remove();
+}

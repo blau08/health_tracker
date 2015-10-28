@@ -1,0 +1,12 @@
+<div class="enter-info">
+  <%= form_for [@user, @food], remote: true do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= f.label :calories %>
+      <%= f.text_field :calories %>
+    </div>
+  <% end %>
+</div>
+
+<button onclick='hideNewForm()' id="cancel-button">Cancel</button>
