@@ -1,0 +1,14 @@
+<ul>
+  <% @exercises.each do |exercise| %>
+    <li>
+      <div class="col-md-6">
+
+      <%= exercise.name %>
+      </div>
+      <div class="col-md-6">
+
+      <%= exercise.calories %>
+      </div>
+    </li>
+  <% end %>
+</ul>

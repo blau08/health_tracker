@@ -15,5 +15,6 @@ class UsersController < ApplicationController
   def show
     @user = current_user
     @foods = @user.foods
+    @exercises = @user.exercises
   end
 end
