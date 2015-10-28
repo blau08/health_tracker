@@ -1,24 +1,26 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6">
+    <div class="well col-md-5 col-md-offset-1 text-center border-right">
       <h1>Food</h1>
-      <h4>Calories Consumed</h4>
       <div id="total-calories">
-        <%= current_user.food_calories %>
+        <h2><%= current_user.food_calories %></h2>
       </div>
-      <%= link_to "Enter Foods", new_user_food_path(current_user), id: "enter-food-link", remote: true %>
+      <h4>Calories Consumed</h4>
+      <%= link_to "Enter Foods", new_user_food_path(current_user), id: "enter-food-link", remote: true, class: 'btn btn-primary' %>
+      <hr>
       <div id="show-foods">
         <%= render '/foods/foods' %>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="well col-md-5 text-center">
       <h1>Exercise</h1>
-      <h4>Exercise Calories</h4>
       <div id="exercise-calories">
-        <%= current_user.exercise_calories %>
+        <h2><%= current_user.exercise_calories %></h2>
       </div>
-      <%= link_to "Enter Exercises", new_user_exercise_path(current_user), id: "enter-exercise-link", remote: true %>
+      <h4>Exercise Calories</h4>
+      <%= link_to "Enter Exercises", new_user_exercise_path(current_user), id: "enter-exercise-link", remote: true, class: 'btn btn-primary' %>
+      <hr>
       <div id="show-exercises">
         <%= render '/exercises/exercises' %>
       </div>

@@ -19,3 +19,32 @@
  ul {
    list-style: none;
  }
+
+table {
+  margin-left: auto;
+  margin-right: auto
+}
+
+th.stat-name,
+td.stat-name {
+  text-align: left;
+  width: 10em;
+  font-size: 1.2em;
+}
+
+th.stat-calories,
+td.stat-calories {
+  text-align: right;
+  width: 10em;
+  font-size: 1.2em;
+}
+
+.col-md-5 {
+  padding: 5px;
+  border-radius:10px;
+  margin: 5px;
+  margin-right: 5px;
+}
+.border-right {
+    border-right: 2px solid black;
+}

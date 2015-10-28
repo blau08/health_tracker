@@ -1,14 +1,14 @@
-<ul>
+<div class="stats-info">
+<table class="pretty">
+  <tr>
+    <th class="stat-name"><%= link_to "Name", :sort => "name" %></th>
+    <th class="stat-calories"><%= link_to "Calories", :sort => "calories" %></th>
+  </tr>
   <% @exercises.each do |exercise| %>
-    <li>
-      <div class="col-md-6">
-
-      <%= exercise.name %>
-      </div>
-      <div class="col-md-6">
-
-      <%= exercise.calories %>
-      </div>
-    </li>
+    <tr>
+      <td class="stat-name"><%= exercise.name %></td>
+      <td class="stat-calories"><%= exercise.calories %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
+</div>
