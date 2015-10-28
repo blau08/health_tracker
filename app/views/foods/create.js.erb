@@ -2,3 +2,4 @@ $("#enter-food-link").show();
 $("#enter-food-form").remove();
 $("#food-cancel-button").remove();
 $("#show-foods").html("<%= j render 'foods' %>");
+$("#total-calories").text("<%= current_user.food_calories %>")
