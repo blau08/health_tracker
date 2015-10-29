@@ -17,4 +17,4 @@ class UsersController < ApplicationController
     @foods = @user.foods.order(params[:sort])
     @exercises = @user.exercises.order(params[:sort])
   end
-end       
+end

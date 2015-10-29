@@ -1,0 +1,15 @@
+<div class="col-md-5">
+  <h3>Search results for "<span class="search-param"><%= search_param %></span>"</h3>
+  <% food_search.each do |food| %>
+    <table>
+      <tr>
+        <td class="stat-name">
+          <%= food.name %>
+        </td>
+        <td class="stat-calories">
+          <%= food.calories %>
+        </td>
+      </tr>
+    </table>
+  <% end %>
+</div>

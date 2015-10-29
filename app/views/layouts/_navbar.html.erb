@@ -12,9 +12,9 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-      <%= form_tag(user_foods_path(current_user), :method => "get", class: "navbar-form navbar-left", id: "search-form") do %>
+      <%= form_tag(user_foods_path(current_user), remote: true, :method => "get", class: "navbar-form navbar-left", id: "search-form") do %>
         <div class="input-append">
-          <%= text_field_tag :phone, params[:search], class: "form-control", placeholder: "Search Foods" %>
+          <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search Foods" %>
           <button class="btn btn-default" type="submit"><i class="icon-search"></i>Submit</button>
         </div>
       <% end %>

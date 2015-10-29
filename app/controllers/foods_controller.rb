@@ -5,6 +5,13 @@ class FoodsController < ApplicationController
     else
       @foods = Food.order("created_at DESC")
     end
+
+    @search_param = params[:search]
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new
