@@ -6,9 +6,10 @@ class FoodsController < ApplicationController
       @foods = Food.select(:name).distinct.order("name")
     end
 
-    # @foods = @foods.paginate(:page => params[:page], :per_page => 10)
-
     @search_param = params[:search]
+    # @foods = @foods.paginate(:page => params[:page], :per_page => 10)
+    @searched_foods = @foods
+
 
     respond_to do |format|
       format.html
