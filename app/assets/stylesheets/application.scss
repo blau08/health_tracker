@@ -35,7 +35,7 @@ td.stat-name {
 th.stat-calories,
 td.stat-calories {
   text-align: right;
-  width: 10em;
+  width: 7em;
   font-size: 1.2em;
 }
 
@@ -55,4 +55,9 @@ td.stat-calories {
 
 .search-param {
   color: #3366FF;
+}
+
+td.add-food {
+  text-align: right;
+  width: 3em;
 }

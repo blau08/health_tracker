@@ -9,6 +9,11 @@
         <td class="stat-calories">
           <%= food.calories %>
         </td>
+        <td class="add-food">
+          <%= link_to add_user_food_path(current_user, food), method: 'post', remote: true do %>
+              <span ><i class="glyphicon glyphicon-plus"></i></span>
+            <% end %>
+        </td>
       </tr>
     </table>
   <% end %>

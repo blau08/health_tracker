@@ -7,7 +7,7 @@ class FoodsController < ApplicationController
     end
 
     @search_param = params[:search]
-    
+
     respond_to do |format|
       format.html
       format.js
@@ -37,6 +37,23 @@ class FoodsController < ApplicationController
     else
       flash[:notice] = "Food not saved"
     end
+  end
+
+  def add
+    @user = current_user
+    @food = Food.find(params[:id])
+    @food.user = @user
+    @food.save
+
+    respond_to do |format|
+      format.html {}
+      format.js
+    end
+    
+  end
+
+  def show
+
   end
 
   private
