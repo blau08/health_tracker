@@ -5,7 +5,7 @@
     <div class="well col-md-5 col-md-offset-1 text-center border-right">
       <h1>Food</h1>
       <div id="total-calories">
-        <h2><%= current_user.food_calories %></h2>
+        <%= current_user.food_calories %>
       </div>
       <h4>Calories Consumed</h4>
       <%= link_to "Enter Foods", new_user_food_path(current_user), id: "enter-food-link", remote: true, class: 'btn btn-primary' %>
@@ -29,5 +29,5 @@
   </div>
 
   <div id="search-results"></div>
-
+  
 </div>

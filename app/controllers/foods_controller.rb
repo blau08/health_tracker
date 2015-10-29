@@ -1,10 +1,12 @@
 class FoodsController < ApplicationController
   def index
     if params[:search]
-      @foods = Food.search(params[:search]).order("created_at DESC")
+      @foods = Food.search(params[:search]).select('DISTINCT ON (foods.name) foods.name, foods.id, foods.calories').order("name")
     else
-      @foods = Food.order("created_at DESC")
+      @foods = Food.select(:name).distinct.order("name")
     end
+
+    # @foods = @foods.paginate(:page => params[:page], :per_page => 10)
 
     @search_param = params[:search]
 
@@ -41,7 +43,9 @@ class FoodsController < ApplicationController
 
   def add
     @user = current_user
-    @food = Food.find(params[:id])
+    @added_food = Food.find(params[:id])
+
+    @food = Food.new(name: @added_food.name, calories: @added_food.calories)
     @food.user = @user
     @food.save
 
@@ -49,7 +53,7 @@ class FoodsController < ApplicationController
       format.html {}
       format.js
     end
-    
+
   end
 
   def show

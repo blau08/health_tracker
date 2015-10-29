@@ -1,4 +1,7 @@
-$('#show-foods').append('<tr>' +
+$('#show-foods').append('<table>' +
+                        '<tr>' +
                           '<td class="stat-name"><%= @food.name %></td>' +
                           '<td class="stat-calories"><%= @food.calories %></td>' +
-                        '</tr>')
+                        '</tr>' +
+                        '</table>');
+$('#total-calories').text("<%= current_user.food_calories %>")
